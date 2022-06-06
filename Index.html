@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class="countainer input-holder">
+        <div id="input">
+            <input type="text" placeholder="لطفا زمان را به ثانیه وارد نمایید" class="input">
+            <button id="Start-Counter">ارسال</button>
+        </div>
+        <div id="ErrorMassege" class="active">
+            <!-- زمان را به درستی وارد کنید -->
+        </div>
+        <div class="card">
+            <div class="percent">
+                <svg>
+                    <circle cx="105" cy="105" r="100"></circle>
+                    <circle cx="105" cy="105" r="100" id="ProgressBar" style="--percent: 0;" ></circle>
+                </svg>
+                <div class="number">
+                    <h3>30<span>%</span></h3>
+                </div>
+            </div>
+            <div class="title">
+                <h2></h2>
+            </div>
+        </div>
+        <div class="Massege">
+            <span class="Loading">در حال اجرا ..</span>
+            <span class="Success">شمارنده با موفقیت به پایان رسید</span>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>

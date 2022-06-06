@@ -1,0 +1,168 @@
+body {
+    font-family: Yekan;
+    background-image: linear-gradient(120deg, #212121 0%, #353535 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #555555;
+    overflow: hidden;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input {
+    margin-right: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    flex-direction: column;
+    background-color: #212121;
+    margin: 0 20px;
+    width: 280px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.card .percent {
+    position: relative;
+}
+
+.card svg {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    transform: rotate(-90deg);
+}
+
+.card svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.card svg circle:last-of-type {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke: #3498db;
+}
+
+.card .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card .number h3 {
+    font-weight: 200;
+    font-size: 3.5rem;
+}
+
+.card .number h3 span {
+    font-size: 2rem;
+}
+
+.card .title h2 {
+    margin: 25px 0 0;
+}
+
+.card:nth-child(1) svg circle:last-of-type {
+    stroke: #f39c12;
+}
+
+.card:nth-child(2) svg circle:last-of-type {
+    stroke: #2ecc71;
+}
+
+.input-holder {
+    font-family: Yekan;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.input-holder input {
+    padding: .9rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: .3rem;
+    border: 1px solid #cacaca;
+    background-color: #212121;
+    box-shadow: inset 1px 1px 1px #e0e0e080;
+    color: #4c575c;
+    transition: all .25s ease 0s;
+}
+::placeholder{
+    color: rgb(192, 192, 192);
+    font-family: Yekan;
+}
+
+.input-holder input:focus {
+    border-color: #409eff;
+    outline: none;
+    box-shadow: inset 1px 1px 1px #e0e0e080, 0 0 0 3px #409eff80;
+}
+
+.input-holder button {
+    padding: .5rem;
+    font-size: 1rem;
+    font-family: Yekan;
+    border-radius: .3rem;
+    border: 1px solid #2ecc71;
+    background: #2ecc71;
+    color: #ffffff;
+    transition: all .25s ease 0s;
+    cursor: pointer;
+}
+
+.input-holder button:focus {
+    border-color: #409eff;
+    outline: none;
+    box-shadow: 0 0 0 3px #409eff80;
+}
+
+@font-face {
+    font-family: Yekan;
+    src: url('./Yekan.eot');
+    src: url('Yekan.eot?#iefix') format('Yekan-opentype'),
+         url('./Yekan.woff') format('woff'),
+         url('./Yekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .Loading{
+      text-align: center;
+      display: none;
+
+  }
+  
+  .Success{
+      text-align: center;
+      display: none;
+      color: #2ecc71;
+
+  }
+
+  #ErrorMassege{
+    text-align: center;
+    color: #2ecc71;
+    display: none;
+  }
+  #ErrorMassege.active{
+      display: block;
+  }
+
+  #input{
+      display: block;
+  }
